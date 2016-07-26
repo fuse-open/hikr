@@ -1,0 +1,22 @@
+<Page ux:Class="SplashPage">
+	<Router ux:Dependency="router" />
+
+	<JavaScript File="SplashPage.js" />
+
+	<DockPanel ClipToBounds="true">
+		<Video Layer="Background" File="../Assets/nature.mp4" IsLooping="true" AutoPlay="true" StretchMode="UniformToFill" Opacity="0.5">
+			<Blur Radius="4.75" />
+		</Video>
+
+		<hikr.Text Dock="Bottom" Margin="10" Opacity=".5" TextAlignment="Center" FontSize="12">original video by Graham Uhelski</hikr.Text>
+
+		<Grid RowCount="2">
+			<StackPanel Alignment="VerticalCenter">
+				<hikr.Text Alignment="HorizontalCenter" FontSize="70">hikr</hikr.Text>
+				<hikr.Text Alignment="HorizontalCenter" Opacity=".5">get out there</hikr.Text>
+			</StackPanel>
+
+			<hikr.Button Text="Get Started" FontSize="18" Margin="50,0" Clicked="{goToHomePage}" />
+		</Grid>
+	</DockPanel>
+</Page>

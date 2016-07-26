@@ -1,0 +1,14 @@
+<Panel ux:Class="hikr.Button" Alignment="VerticalCenter" Margin="10" Padding="10" FontSize="16">
+	<string ux:Property="Text" />
+	<float ux:Property="FontSize" />
+
+	<Rectangle Layer="Background" Color="#125F63" CornerRadius="4">
+		<DropShadow Angle="90" Distance="1" Spread="0.2" Size="2" Color="#00000060" />
+	</Rectangle>
+
+	<hikr.Text Value="{Property Text}" FontSize="{Property FontSize}" TextAlignment="Center" />
+
+	<WhilePressed>
+		<Scale Factor=".95" Duration=".08" Easing="QuadraticOut" />
+	</WhilePressed>
+</Panel>
