@@ -1,4 +1,3 @@
-var Observable = require("FuseJS/Observable");
 var Context = require("Modules/Context");
 
 var hike = this.Parameter;
