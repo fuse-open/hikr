@@ -5,6 +5,7 @@
     "FuseJS"
   ],
   "Includes": [
-    "*"
+    "*",
+    "hikes.js:Bundle"
   ]
 }
