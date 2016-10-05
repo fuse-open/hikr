@@ -1,4 +1,4 @@
-<Panel ux:Class="hikr.Button" Alignment="VerticalCenter" Margin="10" Padding="10" FontSize="16">
+<Panel ux:Class="hikr.Button" Margin="10" Padding="10" FontSize="16">
 	<string ux:Property="Text" />
 	<float ux:Property="FontSize" />
 
