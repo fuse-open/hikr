@@ -1,0 +1,3 @@
+<Page ux:Class="hikr.Page">
+	<Image Layer="Background" File="../Assets/background.jpg" StretchMode="UniformToFill" Opacity=".7" />
+</Page>
