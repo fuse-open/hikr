@@ -10,36 +10,34 @@
 		</Grid>
 
 		<ScrollView>
-			<DockPanel>
-				<StackPanel ItemSpacing="10" Padding="10" Dock="Top">
-					<hikr.Text ux:Class="TitleText" Opacity=".6" Margin="0,0,0,5" />
+			<StackPanel ItemSpacing="10" Padding="10">
+				<hikr.Text ux:Class="TitleText" Opacity=".6" Margin="0,0,0,5" />
 
-					<StackPanel>
-						<TitleText>Name:</TitleText>
-						<hikr.TextBox Value="{name}" />
-					</StackPanel>
-
-					<StackPanel>
-						<TitleText>Location:</TitleText>
-						<hikr.TextBox Value="{location}" />
-					</StackPanel>
-
-					<StackPanel>
-						<TitleText>Distance (km):</TitleText>
-						<hikr.TextBox Value="{distance}" InputHint="Decimal" />
-					</StackPanel>
-
-					<StackPanel>
-						<TitleText>Rating:</TitleText>
-						<hikr.TextBox Value="{rating}" InputHint="Integer" />
-					</StackPanel>
+				<StackPanel>
+					<TitleText>Name:</TitleText>
+					<hikr.TextBox Value="{name}" />
 				</StackPanel>
 
-				<DockPanel Padding="10,0">
-					<TitleText Dock="Top">Comments:</TitleText>
+				<StackPanel>
+					<TitleText>Location:</TitleText>
+					<hikr.TextBox Value="{location}" />
+				</StackPanel>
+
+				<StackPanel>
+					<TitleText>Distance (km):</TitleText>
+					<hikr.TextBox Value="{distance}" InputHint="Decimal" />
+				</StackPanel>
+
+				<StackPanel>
+					<TitleText>Rating:</TitleText>
+					<hikr.TextBox Value="{rating}" InputHint="Integer" />
+				</StackPanel>
+
+				<StackPanel>
+					<TitleText>Comments:</TitleText>
 					<hikr.TextView Value="{comments}" TextWrapping="Wrap" />
-				</DockPanel>
-			</DockPanel>
+				</StackPanel>
+			</StackPanel>
 		</ScrollView>
 	</DockPanel>
 </hikr.Page>
