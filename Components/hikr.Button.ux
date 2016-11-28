@@ -5,7 +5,7 @@
 		<DropShadow Angle="90" Distance="1" Spread="0.2" Size="2" Color="#00000060" />
 	</Rectangle>
 
-	<hikr.Text Value="{Property Text}" FontSize="16" TextAlignment="Center" />
+	<hikr.Text Value="{ReadProperty Text}" FontSize="16" TextAlignment="Center" />
 
 	<WhilePressed>
 		<Scale Factor=".95" Duration=".08" Easing="QuadraticOut" />
