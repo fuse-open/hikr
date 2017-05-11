@@ -1,43 +1,29 @@
-<hikr.Page ux:Class="EditHikePage">
+<Page ux:Class="EditHikePage">
 	<Router ux:Dependency="router" />
-
+	
 	<JavaScript File="EditHikePage.js" />
 
-	<DockPanel>
-		<Grid ColumnCount="2" Dock="Bottom">
-			<hikr.Button Text="Cancel" Clicked="{cancel}" />
-			<hikr.Button Text="Save" Clicked="{save}" />
-		</Grid>
+	<ScrollView>
+		<StackPanel>
+			<Text Value="{name}" />
 
-		<ScrollView>
-			<StackPanel ItemSpacing="10" Padding="10">
-				<hikr.Text ux:Class="TitleText" Opacity=".6" Margin="0,0,0,5" />
+			<Text>Name:</Text>
+			<TextBox Value="{name}" />
 
-				<StackPanel>
-					<TitleText>Name:</TitleText>
-					<hikr.TextBox Value="{name}" />
-				</StackPanel>
+			<Text>Location:</Text>
+			<TextBox Value="{location}" />
 
-				<StackPanel>
-					<TitleText>Location:</TitleText>
-					<hikr.TextBox Value="{location}" />
-				</StackPanel>
+			<Text>Distance (km):</Text>
+			<TextBox Value="{distance}" InputHint="Decimal" />
 
-				<StackPanel>
-					<TitleText>Distance (km):</TitleText>
-					<hikr.TextBox Value="{distance}" InputHint="Decimal" />
-				</StackPanel>
+			<Text>Rating:</Text>
+			<TextBox Value="{rating}" InputHint="Integer" />
 
-				<StackPanel>
-					<TitleText>Rating:</TitleText>
-					<hikr.TextBox Value="{rating}" InputHint="Integer" />
-				</StackPanel>
+			<Text>Comments:</Text>
+			<TextView Value="{comments}" TextWrapping="Wrap" />
 
-				<StackPanel>
-					<TitleText>Comments:</TitleText>
-					<hikr.TextView Value="{comments}" TextWrapping="Wrap" />
-				</StackPanel>
-			</StackPanel>
-		</ScrollView>
-	</DockPanel>
-</hikr.Page>
+			<Button Text="Save" Clicked="{save}" />
+			<Button Text="Cancel" Clicked="{cancel}" />
+		</StackPanel>
+	</ScrollView>
+</Page>
