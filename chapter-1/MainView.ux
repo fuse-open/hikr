@@ -1,0 +1,42 @@
+<App>
+	<ClientPanel>
+		<JavaScript>
+			var Observable = require("FuseJS/Observable");
+
+			var name = Observable("Tricky Trails");
+			var location = Observable("Lakebed, Utah");
+			var distance = Observable(10.4);
+			var rating = Observable(4);
+			var comments = Observable("This hike was nice and hike-like. Glad I didn't bring a bike.");
+
+			module.exports = {
+				name: name,
+				location: location,
+				distance: distance,
+				rating: rating,
+				comments: comments
+			};
+		</JavaScript>
+
+		<ScrollView>
+			<StackPanel>
+				<Text Value="{name}" />
+
+				<Text>Name:</Text>
+				<TextBox Value="{name}" />
+
+				<Text>Location:</Text>
+				<TextBox Value="{location}" />
+
+				<Text>Distance (km):</Text>
+				<TextBox Value="{distance}" InputHint="Decimal" />
+
+				<Text>Rating:</Text>
+				<TextBox Value="{rating}" InputHint="Integer" />
+
+				<Text>Comments:</Text>
+				<TextView Value="{comments}" TextWrapping="Wrap" />
+			</StackPanel>
+		</ScrollView>
+	</ClientPanel>
+</App>

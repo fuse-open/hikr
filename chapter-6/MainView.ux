@@ -1,0 +1,13 @@
+<App Background="#022328">
+	<iOS.StatusBarConfig Style="Light" />
+	<Android.StatusBarConfig Color="#022328" />
+
+	<Router ux:Name="router" />
+
+	<ClientPanel>
+		<Navigator DefaultTemplate="home">
+			<HomePage ux:Template="home" router="router" />
+			<EditHikePage ux:Template="editHike" router="router" />
+		</Navigator>
+	</ClientPanel>
+</App>

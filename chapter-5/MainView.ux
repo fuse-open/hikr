@@ -1,0 +1,10 @@
+<App>
+	<Router ux:Name="router" />
+
+	<ClientPanel>
+		<Navigator DefaultTemplate="home">
+			<HomePage ux:Template="home" router="router" />
+			<EditHikePage ux:Template="editHike" router="router" />
+		</Navigator>
+	</ClientPanel>
+</App>
