@@ -52,14 +52,17 @@ function getHikes() {
 function updateHike(id, name, location, distance, rating, comments) {
 	return new Promise(function(resolve, reject) {
 		setTimeout(function() {
+			console.log("Updating hike in backend...");
 			for (var i = 0; i < hikes.length; i++) {
 				var hike = hikes[i];
 				if (hike.id == id) {
+					console.log("Found hike, updating");
 					hike.name = name;
 					hike.location = location;
 					hike.distance = distance;
 					hike.rating = rating;
 					hike.comments = comments;
+					console.log("New hike:" + JSON.stringify(hike));
 					break;
 				}
 			}

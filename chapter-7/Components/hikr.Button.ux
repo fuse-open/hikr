@@ -2,7 +2,7 @@
 	<string ux:Property="Text" />
 
 	<Rectangle Layer="Background" Color="#125F63" CornerRadius="4">
-		<DropShadow Angle="90" Distance="1" Spread="0.2" Size="2" Color="#00000060" />
+		<Shadow Angle="90" Distance="1" Size="2" Color="#00000060" />
 	</Rectangle>
 
 	<hikr.Text Value="{ReadProperty Text}" FontSize="16" TextAlignment="Center" />
