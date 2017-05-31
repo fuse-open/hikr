@@ -13,7 +13,6 @@ function save() {
 }
 
 module.exports = {
-
 	hike: hike,
 
 	cancel: cancel,
