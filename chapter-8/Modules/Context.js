@@ -1,8 +1,6 @@
 var Observable = require("FuseJS/Observable");
 var Backend = require("./Backend");
 
-var hikes = Observable();
-
 function CreateObservableHike(backendHike) {
 	var obj = {};
 	obj.id = Observable(backendHike.id);
@@ -28,6 +26,9 @@ function CreateObservableHike(backendHike) {
 	}
 	return obj;
 }
+
+var hikes = Observable();
+
 function getHike(id) {
 	for(var i = 0; i < hikes.length; i++) {
 		if(hikes.getAt(i).id.value==id) {
