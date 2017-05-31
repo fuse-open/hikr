@@ -28,6 +28,13 @@ function CreateObservableHike(backendHike) {
 	}
 	return obj;
 }
+function getHike(id) {
+	for(var i = 0; i < hikes.length; i++) {
+		if(hikes.getAt(i).id.value==id) {
+			return hikes.getAt(i);
+		}
+	}
+}
 
 Backend.getHikes()
 	.then(function(newHikes) {
@@ -39,31 +46,8 @@ Backend.getHikes()
 	.catch(function(error) {
 		console.log("Couldn't get hikes: " + error);
 	});
-/*
-function updateHike(id, name, location, distance, rating, comments) {
-	for (var i = 0; i < hikes.length; i++) {
-		var hike = hikes.getAt(i);
-		console.log("Finding hike id " + id + ", current: " + hike.id);
-		if (hike.id == id) {
-			console.log("updating");
-			hike.name = name;
-			hike.location = location;
-			hike.distance = distance;
-			hike.rating = rating;
-			hike.comments = comments;
-			hikes.replaceAt(i, hike);
-			break;
-		}
-	}
-	Backend.updateHike(id, name, location, distance, rating, comments)
-		.catch(function(error) {
-			console.log("Couldn't update hike: " + id);
-		});
-}*/
 
 module.exports = {
-	hikes: hikes
-
-
-	//updateHike: updateHike
+	hikes: hikes,
+	getHike: getHike
 };
