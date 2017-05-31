@@ -15,27 +15,27 @@
 
 				<StackPanel>
 					<TitleText>Name:</TitleText>
-					<hikr.TextBox Value="{name}" />
+					<hikr.TextBox Value="{hike.name}" />
 				</StackPanel>
 
 				<StackPanel>
 					<TitleText>Location:</TitleText>
-					<hikr.TextBox Value="{location}" />
+					<hikr.TextBox Value="{hike.location}" />
 				</StackPanel>
 
 				<StackPanel>
 					<TitleText>Distance (km):</TitleText>
-					<hikr.TextBox Value="{distance}" InputHint="Decimal" />
+					<hikr.TextBox Value="{hike.distance}" InputHint="Decimal" />
 				</StackPanel>
 
 				<StackPanel>
 					<TitleText>Rating:</TitleText>
-					<hikr.TextBox Value="{rating}" InputHint="Integer" />
+					<hikr.TextBox Value="{hike.rating}" InputHint="Integer" />
 				</StackPanel>
 
 				<StackPanel>
 					<TitleText>Comments:</TitleText>
-					<hikr.TextView Value="{comments}" TextWrapping="Wrap" />
+					<hikr.TextView Value="{hike.comments}" TextWrapping="Wrap" />
 				</StackPanel>
 			</StackPanel>
 		</ScrollView>
