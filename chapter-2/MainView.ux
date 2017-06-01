@@ -48,12 +48,6 @@
 
 			var hike = Observable();
 
-			var name = hike.map(function(x) { return x.name; });
-			var location = hike.map(function(x) { return x.location; });
-			var distance = hike.map(function(x) { return x.distance; });
-			var rating = hike.map(function(x) { return x.rating; });
-			var comments = hike.map(function(x) { return x.comments; });
-
 			function chooseHike(arg) {
 				hike.value = arg.data;
 			}
@@ -61,11 +55,7 @@
 			module.exports = {
 				hikes: hikes,
 
-				name: name,
-				location: location,
-				distance: distance,
-				rating: rating,
-				comments: comments,
+				hike: hike,
 
 				chooseHike: chooseHike
 			};
@@ -77,22 +67,22 @@
 					<Button Text="{name}" Clicked="{chooseHike}" />
 				</Each>
 
-				<Text Value="{name}" />
+				<Text Value="{hike.name}" />
 
 				<Text>Name:</Text>
-				<TextBox Value="{name}" />
+				<TextBox Value="{hike.name}" />
 
 				<Text>Location:</Text>
-				<TextBox Value="{location}" />
+				<TextBox Value="{hike.location}" />
 
 				<Text>Distance (km):</Text>
-				<TextBox Value="{distance}" InputHint="Decimal" />
+				<TextBox Value="{hike.distance}" InputHint="Decimal" />
 
 				<Text>Rating:</Text>
-				<TextBox Value="{rating}" InputHint="Integer" />
+				<TextBox Value="{hike.rating}" InputHint="Integer" />
 
 				<Text>Comments:</Text>
-				<TextView Value="{comments}" TextWrapping="Wrap" />
+				<TextView Value="{hike.comments}" TextWrapping="Wrap" />
 			</StackPanel>
 		</ScrollView>
 	</ClientPanel>
