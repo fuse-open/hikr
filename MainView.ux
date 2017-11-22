@@ -2,20 +2,24 @@
 	<ClientPanel>
 		<ScrollView>
 			<StackPanel>
+				<Each Items="{hikes}">
+					<Button Text="{name}" Clicked="{chooseHike}" />
+				</Each>
+
 				<Text>Name:</Text>
-				<TextBox Value="{name}" />
+				<TextBox Value="{hike.name}" />
 
 				<Text>Location:</Text>
-				<TextBox Value="{location}" />
+				<TextBox Value="{hike.location}" />
 
 				<Text>Distance (km):</Text>
-				<TextBox Value="{distance}" InputHint="Decimal" />
+				<TextBox Value="{hike.distance}" InputHint="Decimal" />
 
 				<Text>Rating:</Text>
-				<TextBox Value="{rating}" InputHint="Integer" />
+				<TextBox Value="{hike.rating}" InputHint="Integer" />
 
 				<Text>Comments:</Text>
-				<TextView Value="{comments}" TextWrapping="Wrap" />
+				<TextView Value="{hike.comments}" TextWrapping="Wrap" />
 			</StackPanel>
 		</ScrollView>
 	</ClientPanel>
