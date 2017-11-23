@@ -1,26 +1,8 @@
 <App Model="App">
 	<ClientPanel>
-		<ScrollView>
-			<StackPanel>
-				<Each Items="{hikes}">
-					<Button Text="{name}" Clicked="{chooseHike}" />
-				</Each>
-
-				<Text>Name:</Text>
-				<TextBox Value="{hike.name}" />
-
-				<Text>Location:</Text>
-				<TextBox Value="{hike.location}" />
-
-				<Text>Distance (km):</Text>
-				<TextBox Value="{hike.distance}" InputHint="Decimal" />
-
-				<Text>Rating:</Text>
-				<TextBox Value="{hike.rating}" InputHint="Integer" />
-
-				<Text>Comments:</Text>
-				<TextView Value="{hike.comments}" TextWrapping="Wrap" />
-			</StackPanel>
-		</ScrollView>
+		<PageControl>
+			<HomePage />
+			<EditHikePage />
+		</PageControl>
 	</ClientPanel>
 </App>

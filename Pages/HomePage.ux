@@ -1,0 +1,9 @@
+<Page ux:Class="HomePage">
+	<ScrollView>
+		<StackPanel>
+			<Each Items="{hikes}">
+				<Button Text="{name}" Clicked="{chooseHike}" />
+			</Each>
+		</StackPanel>
+	</ScrollView>
+</Page>
