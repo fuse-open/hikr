@@ -14,13 +14,7 @@ class Hike {
 export default class App {
 	constructor() {
 		this.pages = [new HomePage()];
-		this.hike = new Hike(
-			"Tricky Trails",
-			"Lakebed, Utah",
-			10.4,
-			4,
-			"This hike was nice and hike-like. Glad I didn't bring a bike."
-		);
+
 		this.hikes = [
 			new Hike(
 				"Tricky Trails",
@@ -61,8 +55,7 @@ export default class App {
 	}
 
 	goToHike(arg) {
-		this.hike = arg.data;
-		this.pages.push(new EditHikePage());
+		this.pages.push(new EditHikePage(arg.data));
 	}
 
 	goBack() {
