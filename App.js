@@ -1,3 +1,6 @@
+import HomePage from 'Pages/HomePage';
+import EditHikePage from 'Pages/EditHikePage';
+
 class Hike {
 	constructor(name, location, distance, rating, comments) {
 		this.name = name;
@@ -10,6 +13,7 @@ class Hike {
 
 export default class App {
 	constructor() {
+		this.pages = [new HomePage()];
 		this.hike = new Hike(
 			"Tricky Trails",
 			"Lakebed, Utah",
@@ -56,7 +60,12 @@ export default class App {
 		];
 	}
 
-	chooseHike(arg) {
+	goToHike(arg) {
 		this.hike = arg.data;
+		this.pages.push(new EditHikePage());
+	}
+
+	goBack() {
+		this.pages.pop();
 	}
 }
