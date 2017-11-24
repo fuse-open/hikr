@@ -1,4 +1,4 @@
-<App Model="App">
+<App Model="Models/App">
 	<ClientPanel>
 		<Navigator Pages="{pages}">
 			<HomePage ux:Template="HomePage" />
