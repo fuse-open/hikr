@@ -1,23 +1,37 @@
-<Page ux:Class="EditHikePage">
-	<ScrollView>
-		<StackPanel>
-			<Text>Name:</Text>
-			<TextBox Value="{hike.name}" />
+<hikr.Page ux:Class="EditHikePage">
+	<DockPanel>
+		<Grid ColumnCount="2" Dock="Bottom">
+			<hikr.Button Text="Cancel" Clicked="{cancel}" />
+			<hikr.Button Text="Save" Clicked="{save}" />
+		</Grid>
 
-			<Text>Location:</Text>
-			<TextBox Value="{hike.location}" />
+		<ScrollView>
+			<StackPanel ItemSpacing="10" Padding="10">
+				<StackPanel>
+					<TitleText>Name:</TitleText>
+					<hikr.TextBox Value="{hike.name}" />
+				</StackPanel>
 
-			<Text>Distance (km):</Text>
-			<TextBox Value="{hike.distance}" InputHint="Decimal" />
+				<StackPanel>
+					<TitleText>Location:</TitleText>
+					<hikr.TextBox Value="{hike.location}" />
+				</StackPanel>
 
-			<Text>Rating:</Text>
-			<TextBox Value="{hike.rating}" InputHint="Integer" />
+				<StackPanel>
+					<TitleText>Distance (km):</TitleText>
+					<hikr.TextBox Value="{hike.distance}" InputHint="Decimal" />
+				</StackPanel>
 
-			<Text>Comments:</Text>
-			<TextView Value="{hike.comments}" TextWrapping="Wrap" />
+				<StackPanel>
+					<TitleText>Rating:</TitleText>
+					<hikr.TextBox Value="{hike.rating}" InputHint="Integer" />
+				</StackPanel>
 
-			<Button Text="Save" Clicked="{save}" />
-			<Button Text="Cancel" Clicked="{cancel}" />
-		</StackPanel>
-	</ScrollView>
-</Page>
+				<StackPanel>
+					<TitleText>Comments:</TitleText>
+					<hikr.TextView Value="{hike.comments}" TextWrapping="Wrap" />
+				</StackPanel>
+			</StackPanel>
+		</ScrollView>
+	</DockPanel>
+</hikr.Page>

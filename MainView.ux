@@ -1,4 +1,7 @@
-<App Model="Models/App">
+<App Model="Models/App" Background="#022328">
+	<iOS.StatusBarConfig Style="Light" />
+	<Android.StatusBarConfig Color="#022328" />
+	
 	<ClientPanel>
 		<Navigator Pages="{pages}">
 			<HomePage ux:Template="HomePage" />
