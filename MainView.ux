@@ -4,6 +4,7 @@
 	
 	<ClientPanel>
 		<Navigator Pages="{pages}">
+			<SplashPage ux:Template="SplashPage" />
 			<HomePage ux:Template="HomePage" />
 			<EditHikePage ux:Template="EditHikePage" />
 		</Navigator>

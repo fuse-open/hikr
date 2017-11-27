@@ -1,5 +1,6 @@
 import HomePage from 'Pages/HomePage';
 import EditHikePage from 'Pages/EditHikePage';
+import SplashPage from 'Pages/SplashPage';
 import MockBackend from 'Services/MockBackend';
 
 class Hike {
@@ -16,7 +17,7 @@ class Hike {
 export default class App {
 	constructor() {
 		this.mockBackend = new MockBackend();
-		this.pages = [new HomePage()];
+		this.pages = [new SplashPage()];
 		this.hikes = [];
 		this.mockBackend.getHikes().then(hikes => {
 			this.hikes = hikes;
@@ -25,5 +26,9 @@ export default class App {
 
 	goToHike(arg) {
 		this.pages.push(new EditHikePage(arg.data, this.pages, this.mockBackend));
+	}
+	
+	goToHomePage() {
+		this.pages = [new HomePage()]
 	}
 }
