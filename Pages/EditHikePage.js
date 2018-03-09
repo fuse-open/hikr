@@ -1,14 +1,13 @@
+import { current } from "../Models/App";
+
 export default class EditHikePage {
-	constructor(hike, pages, mockBackend) {
-		this.mockBackend = mockBackend;
-		this.pages = pages;
-		
+	constructor(hike) {
 		this.hike = hike;
 		this.hikeCopy = Object.assign({}, hike);
 	}
 
 	save() {
-		this.mockBackend.updateHike(
+		current.mockBackend.updateHike(
 			this.hike.id, 
 			this.hike.name, 
 			this.hike.location, 
@@ -19,11 +18,11 @@ export default class EditHikePage {
 			console.log("There was an error updating hike " + this.hike.id + ": " + err);
 		});
 		
-		this.pages.pop();
+		current.navigation.goBack();
 	}
 
 	cancel() {
 		Object.assign(this.hike, this.hikeCopy);
-		this.pages.pop();
+		current.navigation.goBack();
 	}
 }

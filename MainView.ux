@@ -3,7 +3,7 @@
 	<Android.StatusBarConfig Color="#022328" />
 	
 	<ClientPanel>
-		<Navigator Pages="{pages}">
+		<Navigator Pages="{current.navigation.pages}">
 			<SplashPage ux:Template="SplashPage" />
 			<HomePage ux:Template="HomePage" />
 			<EditHikePage ux:Template="EditHikePage" />
